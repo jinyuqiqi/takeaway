@@ -1,0 +1,110 @@
+<template name="tab">
+    <!--标签切换  -->
+    <view class="box">
+        <view class='nav'>
+            <view class='navbar' bindtap='navBarSwitch' data-nav='1'>
+                <text class="{{top1 ? 'active' : ''}}">商家分类</text>
+                <image wx:if="{{top1}}" src="/imgs/less.png"></image>
+                <image wx:else src="/imgs/more_bottom.png"></image>  
+            </view>
+            <view class='navbar' bindtap='navBarSwitch' data-nav='2'>
+                <text class="{{top2 ? 'active' : ''}}">智能排序</text>
+                <image wx:if="{{top2}}" src="/imgs/less.png"></image>
+                <image wx:else src="/imgs/more_bottom.png"></image>
+            </view>
+            <view class='navbar' bindtap='navBarSwitch' data-nav='3'>
+                <text class="{{top3 ? 'active' : ''}}">优惠活动</text>
+                <image wx:if="{{top3}}" src="/imgs/less.png"></image>
+                <image wx:else src="/imgs/more_bottom.png"></image>
+            </view>
+        </view>
+        <view class='list' wx:if="{{top1 || top2 || top3}}">
+            <text>全部</text>
+            <text wx:if="{{top1}}">便利超市</text>
+            <text wx:if="{{top1}}">水果</text>
+            <text wx:if="{{top1}}">蔬菜</text>
+            <text wx:if="{{top1}}">鲜花</text>
+            <text wx:if="{{top1}}">烘焙</text>
+            <text wx:if="{{top1}}">医药</text>
+            <text wx:if="{{top1}}">餐饮</text>
+            <text wx:if="{{top1}}">家居用品</text>
+            <view class='item' wx:if="{{top2 || top3}}">
+                <image src='/imgs/myaddress.png' wx:if="{{top2}}"></image>
+                <text wx:if="{{top2}}">离我最近</text>
+                <image src='/imgs/icon/shou.png' wx:if="{{top3}}"></image>
+                <text wx:if="{{top3}}">首单立减</text>
+            </view>
+            <view class='item' wx:if="{{top2 || top3}}">
+                <image src='/imgs/hot-sale.png' wx:if="{{top2}}"></image>
+                <text wx:if="{{top2}}">销量最高</text>
+                <image src='/imgs/icon/xin.png' wx:if="{{top3}}"></image>
+                <text wx:if="{{top3}}">新用户立减</text>
+            </view>
+            <view class='item' wx:if="{{top2 || top3}}">
+                <image src='/imgs/star.png' wx:if="{{top2}}"></image>
+                <text wx:if="{{top2}}">评分最高</text>
+                <image src='/imgs/icon/jian.png' wx:if="{{top3}}"></image>
+                <text wx:if="{{top3}}">立减优惠</text>
+            </view>
+            <view class='item' wx:if="{{top2 || top3}}">
+                <image src='/imgs/balance.png' wx:if="{{top2}}"></image>
+                <text wx:if="{{top2}}">起送价最低</text>
+                <image src='/imgs/icon/zeng.png' wx:if="{{top3}}"></image>
+                <text wx:if="{{top3}}">下单免赠</text>
+            </view>
+            <view class='item' wx:if="{{top2 || top3}}">
+                <image src='/imgs/clock.png' wx:if="{{top2}}"></image>
+                <text wx:if="{{top2}}">送单速度最快</text>
+                <image src='/imgs/icon/mian.png' wx:if="{{top3}}"></image>
+                <text wx:if="{{top3}}">免费配送</text>
+            </view>
+            <view class='item' wx:if="{{top3}}">
+                <image src='/imgs/icon/te.png' wx:if="{{top3}}"></image>
+                <text wx:if="{{top3}}">特价优惠</text>
+            </view>
+            <view class='item' wx:if="{{top3}}">
+                <image src='/imgs/icon/quan.png' wx:if="{{top3}}"></image>
+                <text wx:if="{{top3}}">进店领券</text>
+            </view>
+            <view class='item' wx:if="{{top3}}">
+                <image src='/imgs/icon/fan.png' wx:if="{{top3}}"></image>
+                <text wx:if="{{top3}}">下单返券</text>
+            </view>
+            <view class='item' wx:if="{{top3}}">
+                <image src='/imgs/icon/zi.png' wx:if="{{top3}}"></image>
+                <text wx:if="{{top3}}">自提优惠</text>
+            </view>
+            <view class='item' wx:if="{{top3}}">
+                <image src='/imgs/icon/piao.png' wx:if="{{top3}}"></image>
+                <text wx:if="{{top3}}">支持开发票</text>
+            </view>
+        </view>
+
+        <view class='shop'>
+            <view class='wrap'>
+                <view class='wrap-left'>
+                    <image src='http://img0.imgtn.bdimg.com/it/u=2395907280,3625811080&fm=11&gp=0.jpg'></image>
+                </view>
+                <view class='wrap-right'>
+                    <view class='wrap-right-top'>
+                        <text>川菜坊</text>
+                        <image src='/imgs/pay.png'></image>
+                    </view>
+                    <view class='wrap-right-center'>
+                        <block wx:for="{{stars}}">
+                            <image src='/imgs/star.png'></image>
+                        </block>
+                        <text>已售0份</text>
+                    </view>
+                    <view class='wrap-right-center wrap-right-bottom'>
+                        <text>起送￥0 配送￥0 约20分钟</text>
+                        <view>
+                            <image src='/imgs/position.png'></image>
+                            <text>10km</text>
+                        </view>
+                    </view>
+                </view>
+            </view>
+        </view>
+    </view>
+</template>

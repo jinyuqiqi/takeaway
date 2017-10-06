@@ -1,0 +1,12 @@
+<view class="body">
+  <view class="search">
+    <image src="../../../imgs/back.png"></image>
+    <input type='text' placeholder='鲈鱼' placeholder-style="margin-left:50rpx;font-size:28rpx;color:#bbb;"></input>
+    <icon type="search" size="15" color="#000"/>
+    <text class='searchSub'>搜索</text>
+  </view>
+  <view class="hotSearch">
+    <view>热门搜索</view>
+    <text>昆仑大酒店</text><text>辣庄</text><text>外卖</text>
+  </view>
+</view>

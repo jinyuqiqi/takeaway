@@ -1,0 +1,53 @@
+<!--pages/mine/address/addAdress.wxml-->
+<view class='box'>
+    <view class='title'>
+        <image src='/imgs/arrow_left.png' bindtap='backTo'></image>
+        <text>{{click == 'editAddress' ? '编辑地址' : '添加新地址'}}</text>
+    </view>
+    <form bindsubmit="saveAddress">
+            <view class='content'> 
+                  <view class='item'>
+                        <text class='item_txt'>收货人</text>
+                        <input type='text' name="userName" value="{{address.realname}}"></input>
+                  </view>
+                  <view class='item'>
+                        <text class='item_txt'>联系电话</text>
+                        <input name="phoneNumber" type='number' maxlength="11" value="{{address.mobile}}"></input>
+                  </view>
+                  <view class='item'>
+                        <text class='item_txt' bindtap='checkAddress'>所在地区</text>
+                        <image src='/imgs/arrow_down.png'></image>
+                        <picker mode="region" bindchange="bindRegionChange" value="{{region}}">
+                        <!-- <text class='item_ads' wx:else>请选择</text> -->
+                            <view class="picker">
+                                {{region[0]}} {{region[1]}} {{region[2]}}
+                            </view>
+                        </picker>
+                  </view>
+                  <view class='item item_dtl'>
+                        <text>详细地址</text>
+                        <textarea type='text' disabled="true" placeholder='建议您如实填写详细地址，尽可能精确到门牌号码' placeholder-style='color: #999; font-weight: nomal;' name="detailAddress" value="{{detailAddress}}" bindtap='chooseAddress'></textarea> 
+                  </view>
+                  <view class='receiver'></view>
+            </view>
+
+            <view class='save'>
+                  <text>设为默认</text>
+                  <switch checked="{{checked}}" bindchange='setDefault'></switch>
+            </view>
+
+            <button form-type="submit" type="primary" class='saveBtn' wx:if="{{click == 'editAddress'}}">删除地址</button>
+                  
+           
+            <button form-type="submit" type="primary" class='saveBtn'>保存地址</button>
+    </form>
+</view>
+
+ <!-- <view class="section">
+    <view class="section__title">省市区选择器</view>
+    <picker mode="region" bindchange="bindRegionChange" value="{{region}}">
+      <view class="picker">
+        当前选择: {{region[0]}},{{region[1]}},{{region[2]}}
+      </view>
+    </picker>
+</view> -->

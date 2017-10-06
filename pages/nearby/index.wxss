@@ -1,0 +1,124 @@
+.head{
+  background: #fff;
+  display: flex;
+  align-items: center;
+  padding: 20rpx 30rpx;
+  font-size: 36rpx;
+  border-bottom: 1rpx solid #d6d7d6;
+}
+.head  .localtion{
+  display: flex;
+  align-items: center;
+  width:30%;
+}
+.head image{
+  width:46rpx;
+  height:46rpx;
+}
+.head input{
+  width:60%;
+  height:60rpx;
+  background: #e7e7ef;
+  position: relative;
+  padding:10rpx;
+  margin-left:25rpx;
+}
+.head icon{
+  position: absolute;
+  top:40rpx;
+  left:270rpx;
+}
+
+/*  */
+.tab{
+  display:flex;
+  background: #fff;
+}
+.tab view{
+  flex:0 0 25%;
+  text-align: center;
+  padding-top:30rpx;
+  padding-bottom:30rpx;
+  font-size: 36rpx;
+}
+/*  */
+.tabBtn{
+  display: flex;
+  flex-flow: row wrap;
+  align-content: flex-start;
+  padding-top:30rpx;
+  padding-left:30rpx;
+}
+.tabBtn view{
+  box-sizing: border-box;
+  background-color: white;
+  flex: 0 0 21%;
+  text-align: center;
+  font-size: 32rpx;
+  color:#9c9e9c;
+  padding-top:20rpx;
+  padding-bottom: 10rpx;
+  border: 1px solid #e7e3e7;
+  border-radius: 40rpx;
+}
+.tabBtn view{
+  margin-right:4%;
+  margin-bottom: 30rpx;
+}
+/*  */
+.list{
+  display: flex;
+  align-items: flex-start;
+  background: #fff;
+  padding:30rpx;
+  border-bottom:1rpx solid #dedbde;
+}
+.list>image{
+  width:200rpx;
+  height:180rpx;
+  margin-right:20rpx;
+}
+.list .listRight{
+  flex: 1;
+  font-size: 30rpx;
+  color:#9c9a9c;
+  line-height: 50rpx;
+}
+.list .listRight .name{
+  font-size: 38rpx;
+  color:#39414a;
+}
+.list .listRight .star image{
+  width:30rpx;
+  height:30rpx;
+}
+.list .listRight .sort{
+  display: flex;
+  justify-content: space-between;
+}
+ .list .listRight .zan image{
+   width:36rpx;
+   height:36rpx;
+ }
+ .list .listRight .yh{
+   margin-top:30rpx;
+   padding-top:20rpx;
+   border-top:1rpx solid #e7e7e7;
+ }
+  .list .listRight .yh text:nth-child(1){
+    background: #21cfc6;
+    color:#fff;
+    padding:0 5rpx;
+    border-radius: 3rpx;
+    margin-right:10rpx;
+  }
+  .list .listRight .yh view{
+    margin-bottom: 20rpx;
+  }
+   .list .listRight .yh>text{
+    background: #e4393c;
+    color:#fff;
+    padding:0 5rpx;
+    border-radius: 3rpx;
+    margin-right:10rpx;
+  }

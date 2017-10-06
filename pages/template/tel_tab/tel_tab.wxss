@@ -1,0 +1,140 @@
+.box{
+    margin: 20rpx 0;
+    
+    font-size: 30rpx;
+    position: relative;
+}
+
+.box .nav{
+    height: 90rpx;
+    line-height: 90rpx;
+    text-align: center;
+    overflow: hidden;
+    background: #fff;
+    border-bottom: 1px solid #eee;
+}
+
+.box .nav .navbar{
+    width: 33%;
+    float: left;
+    position: relative;
+}
+
+.box .nav .navbar .active{
+    color: red;
+}
+
+.box .nav .navbar image{
+    width: 40rpx;
+    height: 40rpx;
+    position: absolute;
+    top: 30rpx;
+}
+
+.box .list{
+    width: 100%;
+    text-align: left;
+    line-height: 90rpx;
+    position: absolute;
+    top: 92rpx;
+    z-index: 100;
+    background: #fff;
+}
+
+.box .list text,.item{
+    display: block;
+    height: 90rpx;
+    border-bottom: 1px solid #eee;
+    padding-left: 30rpx;
+    overflow: hidden;
+}
+
+.box .list .item image{
+    width: 50rpx;
+    height: 50rpx;
+    display: block;
+    margin-top: 20rpx;
+    float: left;
+}
+
+.box .list .item text{
+    display: block;
+    margin-left: -5rpx;
+}
+
+.box .shop .wrap{
+    background: #fff;
+    margin-bottom: 20rpx;
+    display: flex;
+    flex-direction: row;
+}
+
+.box .shop .wrap .wrap-left{
+    width: 25%;
+    margin-top: 10rpx;
+}
+
+.box .shop .wrap .wrap-left image{
+    width: 180rpx;
+    height: 180rpx;
+}
+
+.box .shop .wrap .wrap-right{
+    width: 72%;
+    margin-top: 10rpx;
+    margin-left: 10rpx;
+}
+
+.box .shop .wrap .wrap-right .wrap-right-top{
+    font-size: 34rpx;
+    font-weight: bold;
+    overflow: hidden;
+}
+
+.box .shop .wrap .wrap-right .wrap-right-top text{
+    display: block;
+    float: left;
+}
+
+.box .shop .wrap .wrap-right .wrap-right-top image{
+    display: block;
+    float: right;
+    width: 40rpx;
+    height: 40rpx;
+}
+
+.box .shop .wrap .wrap-right .wrap-right-center{
+    margin-top: 15rpx;
+    overflow: hidden;
+}
+
+.box .shop .wrap .wrap-right .wrap-right-center image{
+    width: 35rpx;
+    height: 35rpx;
+    display: block;
+    float: left;
+    margin-top: 3rpx;
+}
+
+.box .shop .wrap .wrap-right .wrap-right-center text{
+    display: block;
+    margin-left: 20rpx;
+    float: left;
+}
+
+.box .shop .wrap .wrap-right .wrap-right-bottom text{
+    margin-left: 0;
+}
+
+.box .shop .wrap .wrap-right .wrap-right-bottom view{
+    float: right;
+    overflow: hidden;
+}
+
+.box .shop .wrap .wrap-right .wrap-right-bottom view image{
+    width: 30rpx;
+    height: 30rpx;
+    display: block;
+    margin-top: 5rpx;
+}
+

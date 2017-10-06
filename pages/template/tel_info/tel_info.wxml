@@ -1,0 +1,13 @@
+<template name="msg">
+  <view class="msg">
+    <image class='Icon-img' src='/imgs/broadcast.png'></image>
+    <scroll-view scroll-y="true">
+      <view>
+        智慧城市O2O上线了，欢迎咨询!
+      </view>
+      <view>
+        智慧城市O2O上线了，欢迎咨询!
+      </view>
+    </scroll-view>
+  </view>
+</template>

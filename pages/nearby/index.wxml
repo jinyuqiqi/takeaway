@@ -1,0 +1,54 @@
+<view class="head">
+  <view class="localtion">
+     <picker mode="region" bindchange="bindRegionChange" value="{{region}}">
+      <view class="picker">
+       {{region[2]}} <image src="/imgs/more_bottom.png"></image>
+      </view>
+    </picker>
+  </view>
+  <input placeholder="找附近的吃喝玩乐" maxlength="-1" placeholder-style="margin-left:60rpx;font-size:30rpx;"/>
+  <icon type="search" size="15"/>
+</view>
+<view class="tab">
+  <view>享美食</view>
+  <view>住酒店</view>
+  <view>爱玩乐</view>
+  <view>全部</view>
+</view>
+<view class="tabBtn">
+  <view>热门</view>
+  <view>小吃快餐</view>
+  <view>面包甜点</view>
+  <view>江浙菜</view>
+  <view>川菜</view>
+</view>
+<view class="list">
+  <image src="https://ss0.bdstatic.com/70cFvHSh_Q1YnxGkpoWK1HF6hhy/it/u=886383798,3711402202&fm=27&gp=0.jpg"></image>
+  <view class="listRight">
+    <view class="name">彼蓝湾西餐厅(星光广场店)</view>
+    <view class="star">
+      <image src="/imgs/star.png"></image>
+      <image src="/imgs/star.png"></image>
+      <image src="/imgs/star.png"></image>
+      <image src="/imgs/star.png"></image>
+      <image src="/imgs/star.png"></image> ￥74/人
+    </view>
+    <view class="sort">
+      <text>咖啡厅|星光大道</text>
+      <text>206米</text>
+    </view>
+    <view class="zan">
+      <image src="/imgs/star.png"></image>5262人消费
+    </view>
+    <view class="yh">
+      <view><text>团</text>单人餐58元，双人餐108起</view>
+      <text>惠</text>9.2折（买单立享）
+    </view>
+  </view>
+</view>
+
+
+
+
+
+ 

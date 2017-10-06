@@ -1,0 +1,232 @@
+<import src="../../template/tel_swiper/tel_swiper.wxml" />
+<view class="body">
+  <view class='nav'>
+    <image src="../../../imgs/back_white.png"></image>
+    <text>昆仑大酒店</text>
+    <image src="../../../imgs/star-white.png" class='star'></image>
+    <icon type="search" size="20" color="#fff" />
+  </view>
+  <view class='businessTime'>
+    <image src='/imgs/notice.png'></image> 营业时间:</view>
+  <!--  -->
+  <view class="page">
+    <view class="nav">
+      <view class="nav-son {{shownavindex == 1? 'active' : ''}}" bindtap="listqy" data-nav="1">
+        <view class="content">商品</view>
+      </view>
+      <view class="nav-son {{shownavindex == 2? 'active' : ''}}" bindtap="list" data-nav="2">
+        <view class="content">评价</view>
+      </view>
+      <view class="nav-son {{shownavindex == 3? 'active' : ''}}" bindtap="listpx" data-nav="3">
+        <view class="content">商家</view>
+      </view>
+      <view class="nav-son {{shownavindex == 4? 'active' : ''}}" bindtap="listkf" data-nav="4">
+        <view class="content">客服</view>
+      </view>
+    </view>
+    <view class="quyu" wx:if="{{shownavindex==1}}">
+      <view class="qy quyu-left">
+        <view class="{{select1 == index ? 'current' : ''}}" wx:for="{{cityleft}}" bindtap="selectleft" data-city='{{index}}'>
+          {{index}}
+        </view>
+      </view>
+      <view class="qy quyu-center">
+        <view class="{{select2 == index ? 'current2' : ''}}" wx:for="{{citycenter}}" bindtap="selectcenter" data-city='{{index}}'>
+          <image src="{{item.foodImg}}" class='foodImg'></image>
+          <view class='foodInfo'>
+            <text class='foodName'>{{item.foodName}}</text>
+            <text class='foodDetail'>{{item.foodDetail}}</text>
+            <text class='saleNum'>月销{{item.saleNum}} 赞{{item.fabulous}}</text>
+            <text class='price'>￥{{item.price}}</text>
+            <text class='originPrice'>￥{{item.originPrice}}</text>
+            <text class='zhekou'>{{item.zhekou}}</text>
+          </view>
+        </view>
+      </view>
+    </view>
+    <view class="temp" wx:if="{{shownavindex==2}}">
+      <!-- <view wx:for="{{content}}">
+            {{item}}
+        </view> -->
+      <view class='topScore'>
+        <view class='leftScore'>
+          <text>4.4</text>
+          商家评分
+        </view>
+        <view class='centerScore'>
+          <view class='first'>
+            口味
+            <image src='/imgs/star.png'></image>
+            <image src='/imgs/star.png'></image>
+            <image src='/imgs/star.png'></image>
+            <image src='/imgs/star.png'></image>
+            <text>4.2</text>
+          </view>
+          <view class='second'>
+            包装
+            <image src='/imgs/star.png'></image>
+            <image src='/imgs/star.png'></image>
+            <image src='/imgs/star.png'></image>
+            <image src='/imgs/star.png'></image>
+            <text>4.4</text>
+          </view>
+        </view>
+        <view class='rightScore'>
+          <text>4.8</text>
+          配送评分
+        </view>
+      </view>
+      <view class='publicScore'>
+        <text>大众点评:3.5分</text>
+        <text>1条到店评价</text>
+        <image src='/imgs/more.png' class='more'></image>
+      </view>
+      <view class="evaluateSort">
+        <text class="{{currentTab==0 ? 'on' : ''}}" data-current="0" bindtap="swichNav">全部(2048) </text>
+        <text class="{{currentTab==1 ? 'on' : ''}}" data-current="1" bindtap="swichNav">有图(652) </text>
+        <text class="{{currentTab==2 ? 'on' : ''}}" data-current="2" bindtap="swichNav">好评(964) </text>
+        <text class="{{currentTab==3 ? 'on' : ''}}" data-current="3" bindtap="swichNav">中评(521) </text>
+        <text class="{{currentTab==4 ? 'on' : ''}}" data-current="4" bindtap="swichNav">差评(634) </text>
+        <text class="{{currentTab==5 ? 'on' : ''}}" data-current="5" bindtap="swichNav">好吃(55)</text>
+      </view>
+      <swiper current="{{currentTab}}" class="evaluate" duration="300" style="height:{{winHeight*1.5}}px" bindchange="bindChange">
+        <!-- 全部 -->
+        <swiper-item>
+          <view class='evaluateList'>
+            <!--代表当前标签页下的每一条评价-->
+            <view class='evlTop'>
+              <view class='evlLeft'>
+                <image src='https://ss2.bdstatic.com/70cFvnSh_Q1YnxGkpoWK1HF6hhy/it/u=2993321848,3135960404&fm=27&gp=0.jpg' class='headImg'></image>
+                <view class='elvLeftR'>
+                  <text class='uName'>一浅半夏</text>
+                  <image src="/imgs/star.png" class='star'></image>
+                  <image src="/imgs/star.png" class='star'></image>
+                  <image src="/imgs/star.png" class='star'></image>
+                  <image src="/imgs/star.png" class='star'></image>
+                  <image src="/imgs/star.png" class='star'></image>
+                  <text class='arrive'>56分钟送达</text>
+                </view>
+              </view>
+              <view class='evlTime'>2017.9.12</view>
+            </view>
+            <view class='evlBottom'>
+              <text class='evlContent'>挺好的，还有一层蛋饼。米饭糯糯的</text>
+              <image src='https://ss2.bdstatic.com/70cFvnSh_Q1YnxGkpoWK1HF6hhy/it/u=2197452465,1678182383&fm=27&gp=0.jpg' mode="aspectFit"></image>
+              <text class='reply'>商家回复(当天):亲！名古屋鳗鱼饭感谢你的支持与选择。祝您阖家欢乐，吉祥如意！</text>
+            </view>
+          </view>
+          <view class='evaluateList'>
+            <!--代表当前标签页下的每一条评价-->
+            <view class='evlTop'>
+              <view class='evlLeft'>
+                <image src='https://ss2.bdstatic.com/70cFvnSh_Q1YnxGkpoWK1HF6hhy/it/u=2993321848,3135960404&fm=27&gp=0.jpg' class='headImg'></image>
+                <view class='elvLeftR'>
+                  <text class='uName'>一浅半夏</text>
+                  <image src="/imgs/star.png" class='star'></image>
+                  <image src="/imgs/star.png" class='star'></image>
+                  <image src="/imgs/star.png" class='star'></image>
+                  <image src="/imgs/star.png" class='star'></image>
+                  <image src="/imgs/star.png" class='star'></image>
+                  <text class='arrive'>56分钟送达</text>
+                </view>
+              </view>
+              <view class='evlTime'>2017.9.12</view>
+            </view>
+            <view class='evlBottom'>
+              <text class='evlContent'>挺好的，还有一层蛋饼。米饭糯糯的</text>
+              <image src='https://ss2.bdstatic.com/70cFvnSh_Q1YnxGkpoWK1HF6hhy/it/u=2197452465,1678182383&fm=27&gp=0.jpg'></image>
+              <text class='reply'>商家回复(当天):亲！名古屋鳗鱼饭感谢你的支持与选择。祝您阖家欢乐，吉祥如意！</text>
+            </view>
+          </view>
+        </swiper-item>
+
+        <!-- 我是呵呵 -->
+        <swiper-item>
+          <view>我是呵呵</view>
+        </swiper-item>
+
+        <!-- 我是嘿嘿 -->
+        <swiper-item>
+          <view>我是嘿嘿</view>
+        </swiper-item>
+
+        <!-- 我是哼哼-->
+        <swiper-item>
+          <view>我是哼哼</view>
+        </swiper-item>
+
+        <!-- 我是吼吼 -->
+        <swiper-item>
+          <view>我是吼吼</view>
+        </swiper-item>
+        <swiper-item>
+          <view>我是哎呀</view>
+        </swiper-item>
+      </swiper>
+    </view>
+    <!-----------------------------------商家  -->
+    <view class="temp" wx:if="{{shownavindex==3}}">
+      <!-- <view wx:for="{{content}}">
+            {{item}}
+        </view> -->
+        <!--轮播  -->
+      <template is="swiper" data="{{imgUrls}}" />
+      <!-- 店铺 -->
+      <view class='shop'>
+        <view class='shopTop'>
+          <image  src='http://bpic.ooopic.com/15/42/19/15421970-aeb8f7216ffa5d7a44a25eef9b635cad-0.jpg'></image>
+          <view>
+            <view>川菜坊</view>
+            <view><image src='../../../imgs/star.png'></image><image src='../../../imgs/star.png'></image><image src='../../../imgs/star.png'></image><image src='../../../imgs/star.png'></image><image src='../../../imgs/star.png'></image>   0 </view>
+            <view>已售：0份</view>
+          </view>
+        </view>
+        <view class='shopBottom'>
+          <text>起送价 ￥0</text>
+          <text>配送 ￥0</text>
+          <text>送达时长 0分钟</text>
+        </view>
+      </view>
+      <!--商家服务  -->
+      <view class='service'>
+        <view class='serviceTop'>
+          <image src='../../../imgs/star.png'></image>商家服务
+        </view>
+        <view class='serviceBottom'>
+          <view>
+            <image src='../../../imgs/star.png'></image>点外卖
+          </view>
+          <view>
+             <image src='../../../imgs/star.png'></image>食堂
+          </view>
+          <view>
+             <image src='../../../imgs/star.png'></image>预定
+          </view>
+          <view>
+             <image src='../../../imgs/star.png'></image>排号
+          </view>
+        </view> 
+      </view>
+      <!--店铺信息  -->
+      <view class='shopInfo'>
+        <view><image src='../../../imgs/star.png'></image> 09:00~22:30</view>
+        <view><image src='../../../imgs/star.png'></image> 杭州市-上城区-惠民路55号<image src='../../../imgs/more.png' class='more'></image></view>
+        <view><image src='../../../imgs/star.png'></image> 13867104693<image src='../../../imgs/more.png' class='more'></image></view>
+        <view><image src='../../../imgs/star.png' bindtap='qq'></image> 1741432444<image src='../../../imgs/more.png' class='more'></image></view>
+        <view><image src='../../../imgs/star.png'></image> 1741432444<image src='../../../imgs/more.png' class='more'></image></view>
+        <view><image src='../../../imgs/star.png'></image>门店特写<image src='../../../imgs/more.png' class='more'></image></view>
+      </view>
+      <!--支付方式  -->
+      <view class='payMethod'> <text>付</text> 支持在线支付</view>
+      <!--营业执照  -->
+      <view class='licence'> <view>资质证照</view></view>
+      <!--举报商家  -->
+      <view class='report'>举报商家</view>
+    </view>
+    <view class="temp" wx:if="{{shownavindex==4}}">
+      <view wx:for="{{content}}">
+        {{item}}
+      </view>
+    </view>
+  </view>
+</view>
