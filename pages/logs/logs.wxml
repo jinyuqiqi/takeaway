@@ -2,5 +2,6 @@
 <view class="container log-list">
   <block wx:for="{{logs}}" wx:for-item="log">
     <text class="log-item">{{index + 1}}. {{log}}</text>
+    <view>吾乃万王之王，盖世功业，敢叫天公折服。此外无一物，但见废墟周围，寂寞平沙空茫茫，伸向荒凉的四周</view>
   </block>
 </view>
