@@ -2,7 +2,7 @@
 <view class='box'>
     <view class='empty' wx:if="{{isEmpty}}">
         <image src='/imgs/dizhi.png'></image>
-        <text>您还没有收货地址，快去添加吧!</text>
+        <text>您目前还没有收货地址，快去添加吧!</text>
     </view>
     <view class='wrap' wx:for="{{addressList}}" wx:key="addressList">
         <view class='address'>
